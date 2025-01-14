@@ -1,0 +1,5 @@
+.env
+python-flask-server/
+__pycache__/
+*.pth
+train_model/DiffusionFER/
