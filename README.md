@@ -25,6 +25,8 @@ The `system_design` folder contains a diagram of the system design. This diagram
 ### train_model
 The `train_model` folder was used for training the different models for the user perception subsystem. It contains scripts used during the training process. For training data the DiffusionFER_S dataset was used.
 
+In this folder `EmtionClassifier.ipynb` notebook inludes our most successfull trainings.
+
 ### Pipeline
 
 The pipeline for our interactive system is designed to ensure smooth and efficient processing of user inputs and generation of appropriate responses. The following diagram illustrates the flow of data and control through the various subsystems:
