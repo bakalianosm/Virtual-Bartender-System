@@ -136,13 +136,11 @@ def emotion_detection():
 
             with torch.no_grad():
                 prediction = model(face)
-                # print(prediction)
                 emotion = torch.argmax(prediction, dim=1).item()
                 # print(f"Detected emotion: {emotion}")
                 with lock:
                     global_mood_variable = emotion
         
-        # frame_count += 1
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
@@ -207,27 +205,22 @@ def run_furhat():
             break
         with lock:
             local_mood_variable = global_mood_variable
-        print("Mood of user: ", local_mood_variable)
+        # print("Mood of user: ", local_mood_variable)
         chat_response = chat.send_message(result.message)
-        # print("Chat response: ", chat_response.text)
         start_index = chat_response.text.find('{')
         end_index = chat_response.text.rfind('}') + 1
         json_string = chat_response.text[start_index:end_index]
-        # print("TRIMMED: ", json_string)
         python_object = json.loads(json_string)
 
         mood = determine_mood(python_object['mood'])
         print("Mood of agent: ", mood)
         expression = generate_expression(mood)
-        # print("Expression: ", expression)
         furhat.gesture(body=expression)
 
         action = get_random_action(mood)
         furhat.gesture(body=action)
         furhat.say(text=python_object['text'], blocking=True)
         reset_furhat(furhat)
-        # if mood == 'annoyed':
-        #     gestures.eye_roll_annoyed(furhat)
         if python_object['end'] == True:
             time.sleep(0.2)
             furhat.say(text="Goodbye!", blocking=True)
