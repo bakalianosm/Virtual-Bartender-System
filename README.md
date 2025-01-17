@@ -44,8 +44,5 @@ To get started with this project, follow these steps:
 ## Usage
 The Furhat robot will start interacting with users, recognizing their moods, and responding with appropriate gestures and dialogue.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgements
 We would like to thank our course instructors and peers for their support and guidance throughout this project.
