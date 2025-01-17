@@ -20,10 +20,24 @@ This repository contains the project for the Intelligent and Interactive Systems
 ### system_design
 The `system_design` folder contains a diagram of the system design. This diagram provides a visual representation of how the different subsystems interact with each other.
 
-![System Design Diagram](system_design/system_architecture.png)
+![System Design Diagram](system_design/system_architecture_white.png)
 
 ### train_model
 The `train_model` folder was used for training the model for the user perception subsystem. It contains scripts and data used during the training process.
+
+### Pipeline
+
+The pipeline for our interactive system is designed to ensure smooth and efficient processing of user inputs and generation of appropriate responses. The following diagram illustrates the flow of data and control through the various subsystems:
+
+![Information Pipeline](system_design/information_pipeline.png)
+
+1. **User Input**: The user interacts with the Furhat robot through speech or gestures.
+2. **Mood Recognition**: The `mood_recognition.py` script processes the user input to determine the user's mood.
+3. **Interaction Logic**: Based on the recognized mood, the `interaction.py` script decides the appropriate response.
+4. **Gesture Generation**: The `gestures.py` script generates the necessary gestures for the Furhat robot to perform.
+5. **Response Execution**: The Furhat robot executes the gestures and delivers the response to the user.
+
+This pipeline ensures that the system can effectively recognize and respond to user moods in real-time.
 
 ## Getting Started
 To get started with this project, follow these steps:
