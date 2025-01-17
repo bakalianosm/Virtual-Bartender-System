@@ -23,7 +23,7 @@ The `system_design` folder contains a diagram of the system design. This diagram
 ![System Design Diagram](system_design/system_architecture_white.png)
 
 ### train_model
-The `train_model` folder was used for training the model for the user perception subsystem. It contains scripts and data used during the training process.
+The `train_model` folder was used for training the different models for the user perception subsystem. It contains scripts used during the training process. For training data the DiffusionFER_S dataset was used.
 
 ### Pipeline
 
