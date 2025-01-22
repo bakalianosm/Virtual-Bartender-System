@@ -2,7 +2,7 @@
 
 ## Overview
 This repository contains the project for the Intelligent and Interactive Systems course. The project involves creating an interactive system using the Furhat robot, which can recognize user moods and respond accordingly.
-
+Find more in the report [file](https://github.com/bakalianosm/Virtual-Bartender-System/blob/master/final_report.pdf)
 ### Furhat Virtual Bartender
 
 The Furhat robot in this project is designed to act as a virtual bartender. It can recognize the mood of the user and respond with appropriate gestures and dialogue, creating an engaging and interactive experience.
